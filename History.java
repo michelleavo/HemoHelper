@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class History extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_history);
 
-        Button begin = (Button) findViewById(R.id.begin);
-        begin.setOnClickListener(new View.OnClickListener(){
+        Button goHome = (Button) findViewById(R.id.goHomeBtn);
+        goHome.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, MakeProfile.class));
+                startActivity(new Intent(History.this, HomeScreen.class));
             }
         });
     }
