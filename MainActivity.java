@@ -16,6 +16,7 @@ import android.os.Handler;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.ByteBuffer;
 import java.util.Set;
 import java.util.UUID;
 
@@ -149,18 +150,19 @@ public class MainActivity extends Activity {
             {
                 while(!Thread.currentThread().isInterrupted() && !stopThread)
                 {
-                    try
+                    /*try
                     {
                         int byteCount = inputStream.available();
                         if(byteCount > 0)
                         {
                             byte[] rawBytes = new byte[byteCount];
                             inputStream.read(rawBytes);
-                            final String string=new String(rawBytes,"UTF-8");
+                            ByteBuffer wrapped=ByteBuffer.wrap(rawBytes);
+                            final short num = wrapped.getShort();
                             handler.post(new Runnable() {
                                 public void run()
                                 {
-                                    textView.append(string);
+                                    textView.setText(String.valueOf(num));
                                 }
                             });
 
@@ -168,6 +170,25 @@ public class MainActivity extends Activity {
                     }
                     catch (IOException ex)
                     {
+                        stopThread = true;
+                    }
+
+                     */
+                    try {
+                        if (inputStream.available() > 0) {
+                            int num = inputStream.read();
+                            final String pr = "" + num;
+                            if (num > 0) {
+                                handler.post(new Runnable() {
+                                    public void run()
+                                    {
+                                        textView.setText(pr);
+                                    }
+                                });
+                                
+                            }
+                        }
+                    } catch (IOException e) {
                         stopThread = true;
                     }
                 }
