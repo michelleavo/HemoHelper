@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="How are you today?"
+        android:textColor="#910000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,37 +21,30 @@
         app:layout_constraintVertical_bias="0.078" />
 
     <Button
-        android:id="@+id/historyBtn"
-        android:layout_width="122dp"
-        android:layout_height="97dp"
-        android:text="My History"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
-
-    <Button
         android:id="@+id/contactsBtn"
-        android:layout_width="122dp"
-        android:layout_height="97dp"
+        android:layout_width="179dp"
+        android:layout_height="92dp"
+        android:background="#BCBCBC"
         android:text="My Contacts"
+        android:textColor="#910000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.974" />
 
     <Button
         android:id="@+id/profileBtn"
-        android:layout_width="122dp"
-        android:layout_height="96dp"
+        android:layout_width="179dp"
+        android:layout_height="92dp"
+        android:background="#BCBCBC"
         android:text="My Profile"
+        android:textColor="#910000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
+        app:layout_constraintVertical_bias="0.975" />
 </android.support.constraint.ConstraintLayout>

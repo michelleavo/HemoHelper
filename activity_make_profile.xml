@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E8ABA5"
     tools:context=".MakeProfile">
 
     <TextView
@@ -16,12 +17,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <EditText
         android:id="@+id/nameInput"
-        android:layout_width="188dp"
-        android:layout_height="35dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="@string/Name"
         android:inputType="textPersonName"
@@ -30,11 +31,11 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intro"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <EditText
         android:id="@+id/userPhone"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/PhoneNumber"
@@ -44,12 +45,12 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameInput"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <EditText
         android:id="@+id/contactName"
-        android:layout_width="210dp"
-        android:layout_height="36dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="@string/Name"
         android:inputType="textPersonName"
@@ -58,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eContactLabel"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <TextView
         android:id="@+id/eContactLabel"
@@ -70,20 +71,21 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intro"
-        app:layout_constraintVertical_bias="0.258" />
+        app:layout_constraintVertical_bias="0.318" />
 
     <EditText
         android:id="@+id/eContactPhone"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/PhoneNumber"
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eContactLabel"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <TextView
         android:id="@+id/providerLabel"
@@ -95,24 +97,25 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intro"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <EditText
         android:id="@+id/providerName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="@string/Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/providerLabel"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintVertical_bias="0.133" />
 
     <EditText
         android:id="@+id/providerNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/PhoneNumber"
@@ -122,7 +125,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/providerName"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <Button
         android:id="@+id/continueBtn"
