@@ -13,8 +13,6 @@ import android.widget.EditText;
 
 public class MakeProfile extends AppCompatActivity {
 
-    User user;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,14 +40,14 @@ public class MakeProfile extends AppCompatActivity {
                 String username = userName.getText().toString();
                 //get phone number
                 EditText phoneNumber = (EditText) findViewById(R.id.userPhone);
-                Editable phone = phoneNumber.getText();
+                String phone = phoneNumber.getText().toString();
 
                 //get emergency contact name
                 EditText contactName = (EditText) findViewById(R.id.contactName);
                 String eContactName = contactName.getText().toString();
                 //get emergency contact number
                 EditText eNumber = (EditText) findViewById(R.id.eContactPhone);
-                Editable ePhone = eNumber.getText();
+                String ePhone = eNumber.getText().toString();
                 EmergencyContact emergencyContact = new EmergencyContact(eContactName, ePhone);
 
                 //get provider name
@@ -57,14 +55,15 @@ public class MakeProfile extends AppCompatActivity {
                 String pName = providerName.getText().toString();
                 //get provider number
                 EditText pNumber = (EditText) findViewById(R.id.providerNumber);
-                Editable pPhone = pNumber.getText();
+                String pPhone = pNumber.getText().toString();
                 Provider provider = new Provider(pName, pPhone);
 
-                user = new User(username, phone, emergencyContact, provider);
+                User.user = new User(username, phone, emergencyContact, provider);
                 startActivity(new Intent(MakeProfile.this, HomeScreen.class));
             }
         });
 
     }
+
 
 }

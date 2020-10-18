@@ -5,9 +5,14 @@ import android.text.Editable;
 
 public class EmergencyContact {
     private String name;
-    private Editable phone;
+    private String phone;
 
-    public EmergencyContact(String name, Editable phone) {
+    public EmergencyContact() {
+        this.name = "name";
+        this.phone = "test";
+    }
+
+    public EmergencyContact(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }
@@ -16,7 +21,11 @@ public class EmergencyContact {
         return this.name;
     }
 
-    public Editable getPhone() {
+    public String getPhone() {
         return this.phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

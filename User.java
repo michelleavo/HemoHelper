@@ -5,11 +5,22 @@ import android.text.Editable;
 
 public class User {
     private String name;
-    private Editable phone;
+    private String phone;
     private EmergencyContact contact;
     private Provider provider;
+    public static User user = new User();
+    private double latitude;
+    private double longitude;
 
-    public User(String name, Editable phone, EmergencyContact contact, Provider provider) {
+    public User() {
+        this.name = "name";
+        this.phone = "phone";
+        this.contact = new EmergencyContact();
+        this.provider = new Provider();
+    }
+
+
+    public User(String name, String phone, EmergencyContact contact, Provider provider) {
         this.name = name;
         this.phone = phone;
         this.contact = contact;
@@ -31,10 +42,24 @@ public class User {
         this.name = name;
     }
 
-    public Editable getPhone() {
+    public String getPhone() {
         return this.phone;
     }
-    public void setPhone(Editable phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public double getLatitude() {
+        return this.latitude;
+    }
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return this.longitude;
+    }
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }

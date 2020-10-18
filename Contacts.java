@@ -9,10 +9,26 @@ import android.widget.TextView;
 
 public class Contacts extends AppCompatActivity {
 
+    MakeProfile profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
+
+        TextView ecName = (TextView) findViewById(R.id.eContactName);
+        String tester = User.user.getEmergencyContact().getName();
+        ecName.setText(tester);
+
+        TextView ecNumber = (TextView) findViewById(R.id.eContactNumber);
+        String tester2 = User.user.getEmergencyContact().getPhone();
+        ecNumber.setText(tester2);
+
+        TextView pName = (TextView) findViewById(R.id.pName);
+        pName.setText(User.user.getProvider().getName());
+
+        TextView pNumber = (TextView) findViewById(R.id.pNumber);
+        pNumber.setText(User.user.getProvider().getNumber());
 
         //return home button
         Button goHome = (Button) findViewById(R.id.goHomeBtn2);
@@ -44,4 +60,5 @@ public class Contacts extends AppCompatActivity {
         TextView pNumber = (TextView) findViewById(R.id.pNumber);
         pNumber.setText(user.getProvider().getNumber());
     }
+
 }
